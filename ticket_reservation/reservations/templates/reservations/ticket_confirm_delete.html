@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Предупреждение</h2>
+  <p>Вы серьезно хотите удалить билет?</p>
+  <form method="post" action="">
+    {% csrf_token %}
+    <button type="submit">Да, удалить</button>
+  </form>
+  <br>
+  <a href="{% url 'ticket_list' %}">Отмена</a>
+{% endblock %}

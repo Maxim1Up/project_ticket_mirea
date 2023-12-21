@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Бронь билетов - My Django Project{% endblock %}
+
+{% block header %}Бронь билетов{% endblock %}
+
+{% block content %}
+  <div class="mt-4">
+    <h2>Добро пожаловать на Бронь билетов</h2>
+    <h3>Система для создания мероприятий, билетов и просмотра клиентов</h3>
+
+    <ul class="navbar navbar-light bg-light">
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/reservations/events/' %}active{% endif %}" href="{% url 'event_list' %}">Мероприятия</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/reservations/tickets/' %}active{% endif %}" href="{% url 'ticket_list' %}">Билеты</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/reservations/users/' %}active{% endif %}" href="{% url 'user_list' %}">Пользователи</a>
+        </li>
+    </ul>
+  </div>
+{% endblock %}

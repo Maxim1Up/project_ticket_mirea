@@ -1,0 +1,39 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Project{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{% block header %}My Django Project{% endblock %}</h1>
+        </header>
+
+        <nav>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/events/' %}active{% endif %}" href="{% url 'event_list' %}">Мероприятия</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/tickets/' %}active{% endif %}" href="{% url 'ticket_list' %}">Билеты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/users/' %}active{% endif %}" href="{% url 'user_list' %}">Пользователи</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="mt-4">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</html>

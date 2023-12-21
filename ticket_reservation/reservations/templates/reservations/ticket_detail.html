@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Ticket List - My Django Project{% endblock %}
+
+{% block header %}Бронь.ру{% endblock %}
+
+{% block content %}
+  <h2>Билет №{{ ticket.pk }} - {{ ticket.event.title }}</h2>
+  <p>Дата и время: {{ ticket.event.date_and_time }}</p>
+  <p>Стоимость: {{ ticket.cost }}</p>
+  <p>Статус: {% if ticket.is_purchased %}Куплен{% else %}Не куплен{% endif %}</p>
+  <p>Покупатель: {% if ticket.buyer %}{{ ticket.buyer.last_name }}{% else %}Не указан{% endif %}</p>
+  <a href="{% url 'ticket_update' pk=ticket.pk %}">Обновить билет</a>
+  <br>
+  <a href="{% url 'ticket_delete' pk=ticket.pk %}">Удалить билет</a>
+  <br>
+  <br>
+  <a href="{% url 'ticket_list' %}">Вернуться к списку билетов</a>
+{% endblock %}

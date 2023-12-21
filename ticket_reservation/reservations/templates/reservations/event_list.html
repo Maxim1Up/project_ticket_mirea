@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Ticket List - My Django Project{% endblock %}
+
+{% block header %}Бронь.ру{% endblock %}
+
+{% block content %}
+  <h2>Список мероприятий</h2>
+  <ul>
+    {% for event in events %}
+      <li><a href="{% url 'event_detail' pk=event.pk %}">{{ event.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'event_create' %}">Создать мероприятие</a>
+{% endblock %}
