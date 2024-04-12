@@ -22,14 +22,14 @@ Build версия не опубликована, загрузите проек�
 Настройки
 -------------
 <p align="center">
- <img width="1000px" src="https://i.ibb.co/HXSC7Qy/image.png" alt="qr"/>
+ <img width="1000px" src="https://github.com/Maxim1Up/project_ticket_mirea/assets/89905819/64968fd2-80d1-486c-98ad-0336e6a03c8b" alt="qr"/>
 </p>
 С помощью параметров Music Volume и VFX Volume регулируйте громкость видеоигры.
 
 Управление
 -------------
 <p align="center">
- <img width="1000px" src="https://i.ibb.co/H7jJnjG/image.png" alt="qr"/>
+ <img width="1000px" src="https://github.com/Maxim1Up/project_ticket_mirea/assets/89905819/34bb7510-8eac-49c6-81bc-2c6da021fa36" alt="qr"/>
 </p>
 WASD на клавиатуре - перемещение персонажа по локации <br/>
 ПКМ (Правая кнопка мыши) - стрельба, прицел смотрит по направлению курсора <br/>
